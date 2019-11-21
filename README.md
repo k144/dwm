@@ -14,4 +14,7 @@ The patches I've added are:
 - dwm-status2d-6.2.diff
 
 ## Other changes
-I've also set the background and foreground colors to #222222, and moved some keybindings to [sxhkdrc](https://github.com/baskerville/sxhkd).
+- set the background and foreground colors to `#222222`
+- moved some keybindings to [sxhkdrc](https://github.com/baskerville/sxhkd)
+- changed some other keybindings
+- changed compiler the in `makefile` to tcc
