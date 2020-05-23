@@ -1,20 +1,20 @@
 # k144's build of dwm
-**dwm is an extremely fast, small, and dynamic window manager for X.**
 
-More info on dwm can be found in the README file, and on the [projects website](https://dwm.suckless.org/).
+dwm is a simple dynamic window manager for X.
 
-## Patches
-The patches I've added are:
-- dwm-activetagindicatorbar-6.2.diff
-- dwm-attachbelow-6.2.diff
-- dwm-centeredwindowname-20180909-6.2.diff
-- dwm-noborder-6.2.diff
-- dwm-pertag-20170513-ceac8c9.diff
-- dwm-scratchpad-6.2.diff
-- dwm-status2d-6.2.diff
+## Patches and features
 
-## Other changes
-- set the background and foreground colors to `#222222`
-- moved some keybindings to [sxhkdrc](https://github.com/baskerville/sxhkd)
-- changed some other keybindings
-- changed compiler the in `makefile` to tcc
+- Clickable statusbar with my build of [dwmblocks](https://github.com/k144/dwmblocks).
+- Reads xresources colors/variables (i.e. works with `pywal`, etc.).
+- scratchpad: Accessible with mod+shift+enter.
+- New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
+- True fullscreen (`super+f`) and prevents focus shifting.
+- Windows can be made sticky (`super+s`).
+- stacker: Move windows up the stack manually (`super-K/J`).
+- shiftview: Cycle through tags (`super+g/;`).
+- vanitygaps: Gaps allowed across all layouts.
+- swallow patch: if a program run from a terminal would make it inoperable, it temporarily takes its place to save space.
+
+## Please install `libxft-bgra`!
+
+This build of dwm does not block color emoji in the status/info bar, so you must install [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) from the AUR, which fixes a libxft color emoji rendering problem, otherwise dwm will crash upon trying to render one. Hopefully this fix will be in all libxft soon enough.
